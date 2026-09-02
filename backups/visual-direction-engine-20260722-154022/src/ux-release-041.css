@@ -1,0 +1,36 @@
+/* 0.3.41: production readability, resilient timeline cards, and Design library IA */
+.timeline-sequence-head{align-items:start}
+.timeline-sequence-title strong,.timeline-sequence-title span,.timeline-shot-copy strong,.timeline-shot-copy>small{overflow:visible;text-overflow:clip;white-space:normal;overflow-wrap:anywhere}
+.timeline-sequence-title span{line-height:1.45}
+.timeline-shot-lane{align-items:stretch}
+.timeline-shot-clip{height:auto;min-height:132px;grid-template-columns:94px minmax(176px,1fr)}
+.timeline-shot-visual{min-height:130px}
+.timeline-shot-copy{align-content:start;min-width:0;padding:13px 12px}
+.timeline-shot-copy strong{font-size:12px;line-height:1.28}
+.timeline-shot-copy>small{line-height:1.42}
+.timeline-shot-copy>div{align-items:end;flex-wrap:wrap}
+.timeline-shot-copy>div>span{max-width:100%;line-height:1.35;white-space:normal}
+
+.design-filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 32px;padding:14px;border:1px solid #ffffff14;background:#0c121d}
+.design-filter-bar button{display:flex;align-items:center;gap:8px;min-height:38px;padding:0 13px;border:1px solid #ffffff19;background:#10192a;color:#bdc9dc;font:700 10px var(--ui);letter-spacing:.06em;cursor:pointer;transition:.18s ease}
+.design-filter-bar button:hover{border-color:#ffc85799;color:#ffdc91}
+.design-filter-bar button.active{border-color:#ffc857;background:#3a2a16;color:#ffe4aa;box-shadow:inset 3px 0 #ffc857}
+.design-filter-bar b{color:#8091aa;font-size:9px}.design-filter-bar button.active b{color:#ffe4aa}
+.preset-family{padding:34px 0 8px;border-top:1px solid #ffffff12}
+.preset-family header{align-items:baseline;margin-bottom:16px}
+.preset-family header small{color:#ffc857;font-size:16px;font-weight:900;letter-spacing:.16em;text-shadow:0 1px 0 #000}
+.preset-family header span{color:#a7b1c5;font-size:10px;font-weight:800}
+.preset-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.preset-card{min-height:210px;padding:16px;border-color:#ffffff1a}
+.preset-card b{font-size:18px;line-height:1.14}.preset-card small{font-size:12px;line-height:1.35}
+.preset-intake{padding:34px 0 28px}.preset-intake h2{font-size:28px}
+.recommended-styles{border-top:0;padding-top:0}.design-sets{margin-top:22px}
+
+.character-modal-production{width:min(940px,94vw);max-height:92vh;overflow:auto}
+.character-reference-section{display:grid;gap:12px;margin:18px 0;padding:16px;border:1px solid #6b95bf59;background:linear-gradient(125deg,#101a2a,#11111c)}
+.character-reference-section>div:first-child{display:grid;gap:5px}.character-reference-section small{color:#91c7ff;font-size:9px;font-weight:800;letter-spacing:.14em}.character-reference-section strong{color:#eff6ff;font-size:15px}.character-reference-section p{max-width:720px;margin:0;color:#a9b7ca;font-size:10px;line-height:1.45}
+.character-reference-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:10px;max-height:330px;overflow:auto;padding:2px}
+.character-reference-card{display:grid!important;grid-template-columns:1fr;gap:7px;padding:8px;border:1px solid #ffffff19;background:#0a1019;color:#dae7f7!important;letter-spacing:normal!important;cursor:pointer;transition:.16s ease}
+.character-reference-card:hover{border-color:#ffc85788;transform:translateY(-1px)}.character-reference-card.selected{border-color:#ffc857;box-shadow:inset 2px 0 #ffc857;background:#1b1720}
+.character-reference-card input{position:absolute;opacity:0}.character-reference-thumb{display:block;aspect-ratio:1.18;background:#16243a center/cover}.character-reference-name{overflow:hidden;color:#e9f0fa;font-size:10px;font-weight:700;text-overflow:ellipsis;white-space:nowrap}.character-reference-card select{width:100%;min-height:30px;border:1px solid #ffffff1d;background:#080c14;color:#c9d6e8;padding:4px;font-size:9px}.character-reference-card select:disabled{opacity:.45}.character-reference-empty{padding:16px;border:1px dashed #6b7c975c;color:#92a2b9;font-size:11px;line-height:1.45}
+@media(max-width:760px){.timeline-sequence-head{grid-template-columns:34px minmax(180px,1fr) auto}.timeline-shot-clip{min-width:238px}.preset-family header small{font-size:14px}.preset-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.character-reference-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

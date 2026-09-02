@@ -1,0 +1,9 @@
+﻿
+
+Algorithm : SHA256
+Hash      : 819452E275C8C8096154118328BC77FEEBDCCBBD97751702993A01E078BC8192
+Path      : C:\Users\eduni\Documents\Playground\wheelbarrow-studios-story-maker\dist-release\Wheelbarrow Studios Story 
+            Maker Setup 0.3.33.exe
+
+
+

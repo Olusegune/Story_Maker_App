@@ -1,0 +1,266 @@
+.storyboard-notice{display:grid;grid-template-columns:minmax(170px,.35fr) minmax(0,1fr);align-items:center;gap:22px;margin:22px 0;padding:18px 20px;border:1px solid #6bd8db55;border-left:3px solid #6ee7e0;background:linear-gradient(105deg,#163548,#18172f)}.storyboard-notice strong{color:#f4ffff;font-size:15px;letter-spacing:.02em}.storyboard-notice span{color:#bfd0df;font-size:11px;line-height:1.55}.scene-card-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px solid #ffffff12}.scene-card-actions .save-button{padding:10px 12px}.scene-card-actions .line-action{padding:8px 0;font-size:10px}.scene-card.needs-generation .scene-image{background:linear-gradient(135deg,#17233b,#131226)!important}.scene-card.needs-generation .scene-image:after{content:"DIRECT THIS FRAME";position:absolute;inset:0;display:grid;place-items:center;color:#9ee9e2;font-size:9px;letter-spacing:.13em;text-shadow:0 2px 7px #000}.scene-card .scene-image em{right:9px;bottom:9px;left:auto;top:auto;padding:5px 7px;background:#070b12d9;color:#9ee9e2;font-size:8px;font-style:normal;letter-spacing:.1em}.character-profile-copy>div:last-child{gap:10px 14px}.character-profile-copy .character-lab-button{font-size:10px}.shot-director-modal .workspace-heading,.shot-director-modal h2{margin-bottom:28px}.visual-controls{gap:18px!important;margin:22px 0!important}.visual-reference-tray{gap:16px!important;margin:22px 0!important;padding:18px!important}.visual-reference-tray>div:last-of-type{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.visual-reference-tray .quiet-button{margin-top:12px}.visual-disclosure{max-width:680px;color:#91a6bb!important;line-height:1.6!important}@media(max-width:760px){.storyboard-notice{grid-template-columns:1fr;gap:8px}.visual-reference-tray>div:last-of-type{grid-template-columns:1fr}}
+.script-suggestions-card{margin-top:12px;padding:25px 27px;background:linear-gradient(115deg,#141a31,#10131d 58%,#17132b);border:1px solid #7d91df57;box-shadow:inset 2px 0 #73d5c5}
+.suggestion-list{display:grid;gap:14px;margin-top:18px}
+.suggestion-card{padding:18px 20px;border:1px solid #ffffff17;background:#0e1220}
+.suggestion-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.suggestion-head small{color:#7ee5e0;font-size:8px;letter-spacing:.13em}
+.suggestion-head h3{margin:4px 0 0;color:#eef3ff;font-size:14px}
+.suggestion-rationale{margin:8px 0 0;color:#9bb0c9;font-size:11px;line-height:1.5}
+.suggestion-diff{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.suggestion-diff.single{grid-template-columns:1fr}
+.suggestion-diff small{color:#7286a4;font-size:8px;letter-spacing:.1em}
+.suggestion-diff p{margin:5px 0 0;padding:10px;border-left:2px solid #ffffff1a;background:#080b13;color:#c7d3e6;font-size:11px;line-height:1.5}
+.suggestion-diff>div:last-child p,.suggestion-diff>div:last-child textarea{border-left-color:#6ee7e0;color:#e9fffb}
+.suggestion-diff textarea{width:100%;margin:5px 0 0;padding:10px;border:0;border-left:2px solid #ffffff1a;background:#080b13;color:#c7d3e6;font:400 11px/1.5 var(--ui, inherit);resize:vertical}
+.suggestion-diff textarea:focus{outline:1px solid #6ee7e07d}
+.suggestion-impact{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
+.suggestion-impact span{display:block;color:#c7d3e6;font-size:10px;line-height:1.5;max-width:280px}
+.suggestion-impact small{display:block;color:#7286a4;font-size:8px;letter-spacing:.1em;margin-bottom:2px}
+.suggestion-actions{display:flex;gap:10px;margin-top:14px}
+.animate-button{background:linear-gradient(105deg,#6ee7e0,#52c9e8 59%,#6f93ff)!important;border-color:#6ee7e07d!important}
+.animate-button:before{content:"▶ "}
+.paste-story-modal{width:min(760px,94vw)!important}
+.paste-story-modal h2{margin:4px 0 10px;font:600 22px/1.2 var(--display, inherit)}
+.paste-story-modal .scene-modal-note{margin:0 0 16px}
+.paste-story-modal textarea{width:100%;min-height:340px;resize:vertical;font-family:ui-monospace,"SF Mono",Consolas,monospace!important;line-height:1.5;white-space:pre-wrap}
+.paste-story-modal>div{display:flex;gap:10px;margin-top:18px}
+.field-lock-toggle{margin-left:8px;padding:2px 8px;border:1px solid #ffffff22;background:#12172400;color:#7286a4;font-size:8px;letter-spacing:.1em;cursor:pointer;vertical-align:middle}
+.field-lock-toggle:hover{border-color:#ffffff44;color:#c7d3e6}
+.field-lock-toggle.locked{border-color:#f5c86e88;background:#2a220f;color:#f5c86e}
+textarea[readonly]{opacity:.75;cursor:not-allowed}
+.review-structure{margin-top:18px;padding-top:16px;border-top:1px solid #ffffff17}
+.review-structure small{color:#82d7c5;font-size:8px;letter-spacing:.16em}
+.review-structure h3{margin:7px 0 0;color:#eef3ff;font:600 16px var(--display, inherit)}
+.review-structure p{margin:6px 0 0;color:#9ea9ba;font-size:11px;line-height:1.5;max-width:640px}
+.creative-influence-card{margin-top:12px;padding:25px 27px;background:linear-gradient(115deg,#141a31,#10131d 58%,#17132b);border:1px solid #7d91df57;box-shadow:inset 2px 0 #73d5c5}
+.creative-influence-card h2{max-width:700px;margin:9px 0 0;font:600 20px/1.2 var(--display, inherit);letter-spacing:-.02em}
+.influence-input-row{display:flex;gap:10px;margin-top:18px}
+.influence-input-row input{flex:1;padding:11px 13px;border:1px solid #ffffff22;background:#080b13;color:#e9f4ff;font-size:12px}
+.influence-input-row input:disabled{opacity:.5}
+.influence-result{margin-top:18px;padding-top:16px;border-top:1px solid #ffffff17}
+.influence-result>small{color:#82d7c5;font-size:8px;letter-spacing:.16em}
+.influence-traits{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.influence-traits span{padding:6px 10px;border:1px solid #6ee7e04a;background:#0e1a20;color:#9ee9e2;font-size:10px}
+.influence-result p{margin:12px 0 0;color:#7f8aa0;font-size:10px;font-style:italic;line-height:1.5}
+.recommended-styles{margin:24px 0}
+.recommended-styles header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.recommended-styles .visual-style-grid{margin-top:0}
+.preset-card.recommended{border-color:#6ee7e04a}
+.preset-card.recommended:before{background:linear-gradient(135deg,#6ee7e01c,#0d1120 70%)}
+.recommended-reason{margin:4px 0 0;color:#9ee9e2;font-size:9px;line-height:1.4;font-style:italic}
+.wide-modal{width:min(760px,92vw)!important;max-height:86vh;overflow-y:auto}
+.scene-modal-preview{margin:14px 0 18px;padding:12px;border:1px solid #ffffff17;background:#080b13;text-align:center}
+.scene-modal-preview img,.scene-modal-preview video{max-width:100%;max-height:340px;display:block;margin:0 auto;background:#000}
+.scene-modal-preview .quiet-button{margin-top:10px}
+.scene-modal-preview.empty{padding:24px;color:#7f8aa0;font-size:11px}
+.media-preview.with-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
+.media-preview.with-video i{display:grid;place-items:center;position:absolute;inset:0;z-index:1;width:36px;height:36px;margin:auto;border-radius:50%;background:#0a0c15b0;border:1px solid #ffffff40;font-size:13px;color:#fff}
+@media(max-width:760px){.suggestion-diff{grid-template-columns:1fr}}
+.drift-report-modal{max-width:680px}.drift-report-body{margin:18px 0}.drift-scores{display:grid;gap:14px;margin-bottom:22px}.drift-score-bar{display:grid;grid-template-columns:minmax(120px, 0.3fr) 1fr minmax(50px, 0.2fr);align-items:center;gap:12px;padding:10px;background:#0e1220;border:1px solid #ffffff12;border-radius:6px}.drift-label{color:#c7d3e6;font-size:11px;font-weight:500}.drift-value{text-align:right;color:#b8c5d4;font-size:11px}.drift-score-bar progress{border:0;background:#ffffff17;height:6px;border-radius:3px}.drift-score-bar progress::-webkit-progress-bar{background:#ffffff17}.drift-score-bar progress::-webkit-progress-value{background:linear-gradient(90deg, #67d96f, #6ee7e0)}.drift-score-bar progress.status-locked::-webkit-progress-value{background:#67d96f}.drift-score-bar progress.status-acceptable::-webkit-progress-value{background:#f5c86e}.drift-score-bar progress.status-minor::-webkit-progress-value{background:#ff9966}.drift-score-bar progress.status-critical::-webkit-progress-value{background:#ff6b6b}.drift-score-bar.overall{padding:12px;background:linear-gradient(135deg, #141a31, #10131d);border:1px solid #6ee7e055;grid-template-columns:minmax(140px, 0.35fr) 1fr minmax(60px, 0.25fr)}.drift-findings, .drift-suggestions{margin:18px 0;padding:16px;background:#0e1220;border:1px solid #ffffff12;border-radius:6px}.drift-findings h3, .drift-suggestions h3{margin:0 0 12px;color:#eef3ff;font-size:12px;font-weight:600;letter-spacing:.05em}.drift-findings ul, .drift-suggestions ul{margin:0;padding:0;list-style:none}.drift-findings li, .drift-suggestions li{padding:6px 0;color:#b8c5d4;font-size:11px;line-height:1.5}.drift-findings li strong, .drift-suggestions li strong{color:#9ee9e2;font-weight:600}
+.style-dna-content{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;margin-top:22px;align-items:start}
+.saved-dnas, .drift-checker{padding:20px;background:#0e1220;border:1px solid #ffffff12;border-radius:8px}
+.dna-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:16px}
+.dna-card{padding:16px;background:#080b13;border:1px solid #ffffff14;border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.dna-card h3{margin:0;color:#eef3ff;font-size:13px}
+.dna-card small{color:#7286a4;font-size:9px;letter-spacing:.05em}
+.dna-card p{margin:8px 0 0;color:#9bb0c9;font-size:11px;line-height:1.5}
+.dna-details{display:flex;flex-direction:column;gap:4px;margin-top:10px}
+.dna-details span{color:#9ee9e2;font-size:10px}
+.dna-actions{display:flex;gap:8px;flex-wrap:wrap}
+.dna-actions .line-action{padding:6px 0;font-size:10px}
+.drift-check-inputs{display:flex;flex-direction:column;gap:14px;margin-top:16px}
+.drift-check-inputs label{display:flex;flex-direction:column;gap:6px;color:#7286a4;font-size:9px;letter-spacing:.08em}
+.drift-check-inputs select{padding:9px 11px;border:1px solid #ffffff22;background:#080b13;color:#e9f4ff;font-size:12px}
+.batch-drift-list{display:grid;gap:10px;margin:18px 0}
+.batch-drift-row{display:grid;grid-template-columns:minmax(140px,1fr) 2fr minmax(40px,auto);align-items:center;gap:12px;padding:10px 12px;background:#0e1220;border:1px solid #ffffff12;border-radius:6px}
+.batch-drift-row h3{margin:0;color:#eef3ff;font-size:12px}
+.batch-drift-row small{color:#7286a4;font-size:9px}
+.batch-drift-row progress{border:0;background:#ffffff17;height:6px;border-radius:3px;width:100%}
+.batch-drift-row.status-locked progress::-webkit-progress-value{background:#67d96f}
+.batch-drift-row.status-acceptable progress::-webkit-progress-value{background:#f5c86e}
+.batch-drift-row.status-minor progress::-webkit-progress-value{background:#ff9966}
+.batch-drift-row.status-critical progress::-webkit-progress-value{background:#ff6b6b}
+.scene-board{display:grid;grid-template-columns:1fr;gap:16px;margin-top:29px}
+.scene-group{border:1px solid var(--edge);background:#0b0e16;padding:14px}
+.scene-group>.scene-card{border:0;background:none;padding:0;display:flex;gap:16px}
+.scene-group>.scene-card>.scene-image{width:380px;flex:0 0 380px;height:220px}
+.scene-group>.scene-card>div:last-child{flex:1;padding:0;min-width:0}
+.scene-group>.scene-card>div:last-child>p{-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+.scene-shots{margin-top:14px;padding-top:14px;border-top:1px solid var(--edge);padding-left:18px;border-left:2px solid #6ee7e04a}
+.scene-shots>small{display:block;margin-bottom:10px;color:#82d7c5;font-size:8px;letter-spacing:.16em}
+.scene-shots-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;padding-bottom:4px}
+.scene-shots-row>.shot-card{border:1px solid #ffffff14;background:#080b12;display:block}
+.scene-shots-row>.shot-card>.scene-image{width:100%;height:200px}
+.scene-shots-row>.shot-card>div:last-child{padding:13px;flex:none}
+.scene-shots-row>.shot-card h3{font-size:18px;margin:4px 0}
+.scene-shots-row>.shot-card>div:last-child>p{font-size:12px;-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+.scene-group .scene-image span{color:#eef4ff;font-size:12px;font-weight:800;background:#04060ae0;border:1px solid #ffffff26;letter-spacing:.04em;padding:5px 8px}
+@media(max-width:900px){.scene-group>.scene-card{flex-direction:column}.scene-group>.scene-card>.scene-image{width:100%;flex:none}.style-dna-content{grid-template-columns:1fr}}
+.reference-tile-zoom{position:absolute;right:5px;bottom:25px;z-index:3;width:26px;height:26px;display:grid;place-items:center;border:1px solid #ffffff55;background:#000000cc;color:#fff;font-size:15px;line-height:1;padding:0;border-radius:3px;cursor:pointer;opacity:0;transition:opacity .15s,background-color .15s,border-color .15s}
+.reference-tile:hover .reference-tile-zoom,.reference-tile:focus-within .reference-tile-zoom{opacity:1}
+.reference-tile-zoom:hover{background:#4b6bc9cc;border-color:#7ee5e2}
+.reference-tile.continuity-locked{border-color:#65d8d873;background:#10242d;cursor:default}
+.reference-tile.continuity-locked input{pointer-events:none}
+.reference-tile.continuity-locked em{position:absolute;left:5px;bottom:5px;z-index:2;padding:3px 5px;border:1px solid #70e6db77;background:#07131be8;color:#89eee4;font:800 7px var(--ui);font-style:normal;letter-spacing:.09em}
+.lightbox-backdrop{z-index:40}
+/* The reference-preview lightbox reused .variation-modal/.variation-preview
+   verbatim from the "generated take" review modal (openVariation), sized for
+   a much smaller dialog. Scoped to .lightbox-modal specifically so this
+   doesn't also resize that other, unrelated modal. #lightboxClose also had
+   no styling at all — unlike every other modal's × (.project-modal>
+   #closeModal), it never matched that selector because it's a different id,
+   so it rendered as a bare, tiny default button. */
+.lightbox-modal{width:min(1200px,94vw)}
+.lightbox-modal .variation-preview{height:min(78vh,860px)}
+.lightbox-modal .variation-video{max-height:78vh}
+.lightbox-modal>#lightboxClose{position:absolute;right:13px;top:11px;width:34px;height:34px;display:grid;place-items:center;border:1px solid #ffffff22;border-radius:4px;background:#ffffff0a;color:#c7cfe2;font-size:20px;cursor:pointer;transition:background-color .15s,border-color .15s}
+.lightbox-modal>#lightboxClose:hover{background:#ffffff16;border-color:#ffffff40}
+@media(max-width:640px){.reference-tile-zoom{opacity:1}}
+/* .modal-backdrop centers .project-modal with no height limit and
+ * overflow:visible on every ancestor up to the fixed-positioned backdrop
+ * itself. position:fixed content is excluded from document scroll height, so
+ * a modal taller than the viewport (any content-heavy form on a laptop-height
+ * window, or the reference library below once a character has several
+ * tagged images) has no scrollbar anywhere and no way to reach the portion
+ * that overflows past the top/bottom edge — it just silently isn't there.
+ * Five separate modal subclasses (.character-lab-modal, .wide-modal,
+ * .shot-director-modal, .my-styles-modal, the unused .character-modal-
+ * production) had already independently patched this exact gap with their
+ * own max-height + overflow-y:auto; it was never applied to the shared base
+ * every other modal — including this one's plain Character Bible profile
+ * form — actually inherits from. Fixing it once here instead of a sixth
+ * modal-specific patch. */
+.project-modal{max-height:90vh;overflow-y:auto}
+/* Character Bible's profile modal: a portrait sidebar (hero + reference
+ * picker) pinned beside the written fields via position:sticky, so the
+ * character's face stays visible while writing appearance/wardrobe/voice
+ * text below it instead of only appearing once you scroll to a reference
+ * section at the bottom. Sticky positioning here relies on .project-modal
+ * directly above being the scrolling ancestor (overflow-y:auto, no
+ * intermediate scroll container between it and .character-modal-portrait).
+ * Set and Prop profile modals reuse this same layout (still under the
+ * .character-modal name — already an established generic-width utility in
+ * this file, not literally character-specific despite the name).
+ */
+.character-modal{width:min(980px,94vw)}
+.character-modal-layout{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:start;margin:22px 0}
+.character-modal-portrait{position:sticky;top:0;display:flex;flex-direction:column;gap:12px}
+@media(max-width:860px){.character-modal-layout{grid-template-columns:1fr}.character-modal-portrait{position:static}}
+/* Shared reference-library component (see referenceLibrary* in
+ * storymaker.js): a hero preview + role-tagged thumbnail grid, used by
+ * every "make this consistent" profile (Character/Set/Prop) AND every
+ * generation Lab (Character/Set/Prop) so the reference-picking experience
+ * never drifts between them again. Fresh class family — deliberately not
+ * reusing the older .character-reference-* rules in ux-release-041.css,
+ * which were written for a single-column, always-visible-grid context only
+ * (no hero, no sidebar, no Lab reuse) and would fight this layout's sizing. */
+.reference-library-head{display:grid;gap:5px}
+.reference-library-head small{color:#91c7ff;font-size:9px;font-weight:800;letter-spacing:.14em}
+.reference-library-head p{margin:0;color:#a9b7ca;font-size:10px;line-height:1.45}
+.reference-library-hero{position:relative;min-height:220px;overflow:hidden;border:1px solid #ffffff1a;background:#0a0f1a}
+.character-modal-portrait .reference-library-hero{min-height:300px}
+.reference-library-hero-image{position:absolute;inset:0;background-size:cover;background-position:center}
+.reference-library-hero-caption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:10px 12px;background:linear-gradient(0deg,#04060ae6,transparent 85%)}
+.reference-library-hero-caption strong{min-width:0;overflow:hidden;color:#fff;font-size:12px;font-weight:700;text-overflow:ellipsis;white-space:nowrap}
+.reference-library-hero-caption small{flex-shrink:0;color:#ffc857;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.reference-library-hero-empty{position:absolute;inset:0;display:grid;place-items:center;gap:8px;padding:20px;text-align:center;color:#7787a0}
+.reference-library-hero-empty span{font-size:26px;color:#8e77ed}
+.reference-library-hero-empty p{margin:0;max-width:190px;font-size:10px;line-height:1.5}
+.reference-library-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;max-height:260px;overflow:auto;padding:2px}
+.character-modal-portrait .reference-library-grid{max-height:340px}
+.reference-library-card{display:grid!important;grid-template-columns:1fr;gap:6px;padding:7px;border:1px solid #ffffff19;background:#0a1019;color:#dae7f7!important;letter-spacing:normal!important;cursor:pointer;transition:.16s ease;position:relative}
+.reference-library-card:hover{border-color:#ffc85788;transform:translateY(-1px)}
+.reference-library-card.selected{border-color:#ffc857;box-shadow:inset 2px 0 #ffc857;background:#1b1720}
+.reference-library-card input{position:absolute;opacity:0}
+.reference-library-thumb{position:relative;display:block;aspect-ratio:1.1;background:#16243a center/cover}
+.reference-library-name{overflow:hidden;color:#e9f0fa;font-size:10px;font-weight:700;text-overflow:ellipsis;white-space:nowrap}
+.reference-library-card select{width:100%;min-height:28px;border:1px solid #ffffff1d;background:#080c14;color:#c9d6e8;padding:3px;font-size:9px}
+.reference-library-card select:disabled{opacity:.45}
+.reference-library-empty{padding:16px;border:1px dashed #6b7c975c;color:#92a2b9;font-size:11px;line-height:1.45}
+.reference-library-preview{position:absolute;top:5px;right:5px;z-index:2;width:27px;height:27px;display:grid;place-items:center;border:1px solid #ffffff55;background:#000000cc;color:#fff;font-size:15px;line-height:1;padding:0;border-radius:3px;cursor:pointer;opacity:0;transition:opacity .15s,background-color .15s,border-color .15s}
+.reference-library-card:hover .reference-library-preview,.reference-library-card:focus-within .reference-library-preview{opacity:1}
+.reference-library-preview:hover{background:#4b6bc9cc;border-color:#7ee5e2}
+.reference-library-thumb .reference-tile-remove{opacity:0;transition:opacity .15s,background-color .15s,border-color .15s}
+.reference-library-card:hover .reference-tile-remove,.reference-library-card:focus-within .reference-tile-remove{opacity:1}
+@media(max-width:640px){.reference-library-preview,.reference-library-thumb .reference-tile-remove{opacity:1}}
+@media(max-width:480px){.reference-library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Shared entity card (entityCardMarkup): the Lab button leads the action row
+ * (both in markup order and visually) since it's the actual next step for
+ * an incomplete card; Edit is a plain secondary link; Remove is present but
+ * quiet by default so a destructive action never visually competes with the
+ * primary one — full contrast returns on hover/focus, so it's never hard to
+ * find, just never the first thing the eye lands on. */
+.profile-card-actions{display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap}
+.profile-card-actions .character-lab-button{order:-1;font-weight:700;letter-spacing:.02em}
+.profile-card-actions .remove-button{opacity:.55;transition:opacity .15s}
+.profile-card-actions .remove-button:hover,.profile-card-actions .remove-button:focus-visible{opacity:1}
+/* Character/Set/Prop Lab used to show zero indication a project style was
+   even being applied to generation. .character-lab-hero-badges just groups
+   the existing reference-count badge with the new style indicator so both
+   still sit flush right against the hero's flex layout. */
+.character-lab-hero-badges{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0}
+.style-indicator{font-size:9px;letter-spacing:.1em;color:#c3a8ff;border:1px solid #a786ff4a;background:#a786ff12;padding:6px 8px;white-space:nowrap}
+.style-indicator-empty{color:#9aa2b8;border-color:#ffffff1c;background:#ffffff06}
+@media(max-width:640px){.character-lab-hero-badges{align-items:flex-start}}
+
+/* 0.4.43: Character Lab is a production review surface, not a narrow
+   settings sidebar. Keep the identity and complete turnaround visible at
+   useful size, while the wider library remains a deliberate secondary step. */
+.character-lab-modal{width:min(1240px,96vw);padding:30px 32px}
+.character-lab-grid{grid-template-columns:minmax(0,1fr) 300px;align-items:start}
+.character-lab-side{min-height:100%;padding:18px}
+.character-lab-model-note{padding:11px;border-left:2px solid #66dcd2;background:#0b1822;color:#adc3d7!important;font-size:10px!important;line-height:1.5!important}
+.character-turnaround-board{margin-top:20px;padding:20px;border:1px solid #3b6578;background:radial-gradient(520px 210px at 96% 0,#5d44a529,transparent 68%),linear-gradient(125deg,#101f2a,#10111d)}
+.character-turnaround-board header{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:16px}.character-turnaround-board header small{color:#73e2da;font:800 9px var(--ui);letter-spacing:.15em}.character-turnaround-board h3{margin:5px 0;color:#eff7ff;font:600 22px/1 var(--display)}.character-turnaround-board p{max-width:620px;margin:0;color:#aab9ca;font-size:11px;line-height:1.5}.character-turnaround-board header>span{flex:none;padding:7px 9px;border:1px solid #71d8ce66;background:#63d8c114;color:#8ce9df;font:800 9px var(--ui);letter-spacing:.1em}
+.character-turnaround-grid{display:grid;grid-template-columns:1.25fr repeat(3,1fr);gap:10px}.character-turnaround-tile{position:relative;display:grid;grid-template-rows:1fr auto auto;min-height:205px;overflow:hidden;padding:0;border:1px solid #ffffff1d;background:#090e17;color:#fff;text-align:left;cursor:pointer}.character-turnaround-tile>span:first-child{grid-row:1/4;grid-column:1;background:#0c1420 center/cover}.character-turnaround-tile:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#05070ce8,transparent 58%);pointer-events:none}.character-turnaround-tile b,.character-turnaround-tile small,.character-turnaround-tile i{z-index:1;position:relative;margin-left:12px}.character-turnaround-tile b{align-self:end;font:700 13px var(--ui)}.character-turnaround-tile small{margin:4px 12px 12px;color:#a9c7d8;font-size:9px}.character-turnaround-tile i{position:absolute;top:9px;right:9px;display:grid;place-items:center;width:28px;height:28px;margin:0;border:1px solid #ffffff55;background:#000a;color:#fff;font-style:normal;opacity:0;transition:opacity .15s}.character-turnaround-tile:hover{border-color:#7ce8dd;transform:translateY(-1px)}.character-turnaround-tile:hover i,.character-turnaround-tile:focus-visible i{opacity:1}.character-turnaround-tile.primary{border-color:#ffc85799}.character-turnaround-tile.empty{display:flex;flex-direction:column;justify-content:flex-end;padding:14px;background:linear-gradient(145deg,#15263b,#0a1019);cursor:default}.character-turnaround-tile.empty>span{color:#7f91a8;font-size:10px;line-height:1.45}.character-turnaround-tile.empty b{margin:12px 0 0;color:#c7d8e9}
+.character-reference-section{margin-top:16px;padding:18px;border:1px solid #ffffff18;background:#0a1019}.character-reference-section .reference-library-grid{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));max-height:285px}.character-reference-section .reference-library-hero{min-height:320px}.character-reference-section .reference-library-thumb{aspect-ratio:1.35}.character-reference-section .reference-library-head{margin-bottom:10px}
+.asset-workspace{max-width:1440px}.asset-workspace-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.42fr);gap:28px;align-items:end;margin:0 0 22px;padding:25px 28px;border:1px solid #4d8c9d77;background:radial-gradient(680px 260px at 100% 0,#6046a92b,transparent 68%),linear-gradient(115deg,#112f3c,#16172a 62%,#251c3c)}.asset-workspace-hero small{color:#71e4d9;font:800 9px var(--ui);letter-spacing:.14em}.asset-workspace-hero h2{max-width:800px;margin:7px 0;font:600 25px/1.15 var(--display);color:#f1f6ff}.asset-workspace-hero p{max-width:760px;margin:0;color:#b3c6d6;font-size:11px;line-height:1.55}.asset-workspace-hero>div:last-child{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}.asset-workspace-hero>div:last-child span{padding:7px 9px;border:1px solid #6fe0d76b;background:#09141eb5;color:#9eece4;font:800 9px var(--ui);letter-spacing:.09em}.asset-library-section{padding:22px;border:1px solid #ffffff17;background:linear-gradient(145deg,#101726,#0b101a)}.asset-library-section>header{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:18px}.asset-library-section small{color:#8fc7ff;font:800 9px var(--ui);letter-spacing:.14em}.asset-library-section h2{margin:5px 0 0;color:#f0f6ff;font:600 20px var(--display)}.asset-library-section header>p{max-width:360px;margin:0;color:#a4b5c8;font-size:10px;line-height:1.5;text-align:right}.asset-reference-section{margin-top:18px}.asset-reference-section .reference-library-hero{min-height:360px}.asset-reference-section .reference-library-grid{grid-template-columns:repeat(auto-fill,minmax(176px,1fr));max-height:300px}.asset-reference-section .reference-library-thumb{aspect-ratio:1.3}@media(max-width:820px){.asset-workspace-hero{grid-template-columns:1fr}.asset-workspace-hero>div:last-child{justify-content:flex-start}.asset-library-section>header{display:grid}.asset-library-section header>p{text-align:left}.asset-reference-section .reference-library-hero{min-height:270px}}
+/* Some supplied style art has cinematic letterboxing baked into the file.
+   These thumbnails crop the very outer edge so each preset reads as one clean,
+   edge-to-edge scene rather than a miniature framed still. */
+.visual-style-card-main{overflow:hidden}.visual-style-card-main img{transform:scale(1.16);transform-origin:center;transition:transform .28s ease}.visual-style-card:hover .visual-style-card-main img{transform:scale(1.19)}
+@media(max-width:820px){.character-lab-modal{padding:24px 20px}.character-turnaround-grid{grid-template-columns:repeat(2,1fr)}.character-turnaround-tile.primary{grid-column:span 2;min-height:260px}.character-reference-section .reference-library-hero{min-height:260px}}
+@media(max-width:520px){.character-turnaround-board header{display:grid;gap:10px}.character-turnaround-grid{grid-template-columns:1fr}.character-turnaround-tile.primary{grid-column:auto}.character-turnaround-tile{min-height:220px}.character-reference-section .reference-library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* 0.4.44: Identity, turnaround, and production-reference images must be
+   inspected whole. These shared reference-library rules intentionally
+   cascade to Character, Set, and Prop Labs. */
+.character-turnaround-tile>span:first-child{background-size:contain;background-repeat:no-repeat}
+.reference-library-hero-image,.reference-library-thumb{background-size:contain;background-repeat:no-repeat;background-color:#070b12}
+
+/* 0.4.48: Locations and production assets are not miniature character
+   cards. Give their empty and populated states an intentional, useful
+   production-card treatment, with a direct route into storyboard assignment. */
+.asset-workspace .character-profile-grid{grid-template-columns:repeat(auto-fit,minmax(480px,1fr));gap:18px}
+.world-asset-card{grid-template-columns:minmax(210px,.72fr) minmax(0,1.28fr);min-height:310px;border-color:#4e6a8466;background:radial-gradient(360px 220px at 0 0,#24576a25,transparent 72%),linear-gradient(145deg,#121c2a,#0b1019)}
+.world-asset-card .character-profile-image{min-height:310px;background-position:center;background-size:cover}
+.world-asset-card:not(.has-image) .character-profile-image{display:grid;place-items:center;background:radial-gradient(circle at 50% 38%,#50d7d730,transparent 19%),linear-gradient(145deg,#152a3a,#0b1019 75%)}
+.world-asset-card:not(.has-image) .character-profile-image:before{content:"ASSET";position:relative;z-index:1;padding:10px 12px;border:1px solid #7ee5e266;color:#a9f4eb;background:#0c1a25b8;font:800 10px var(--ui);letter-spacing:.2em}
+.world-asset-card.location-card:not(.has-image) .character-profile-image:before{content:"LOCATION";color:#c2c0ff;border-color:#9a8bff66;background:#16152ab8}
+.world-asset-card.character-card:not(.has-image) .character-profile-image:before{content:"CHARACTER";color:#ffdba9;border-color:#ffb46a66;background:#241a0cb8}
+.world-asset-card .character-profile-copy{display:flex;min-width:0;flex-direction:column;padding:25px 24px 20px}
+.world-asset-card .character-profile-copy h2{font-size:30px;line-height:1;margin:7px 0 9px}
+.world-asset-card .character-profile-copy>p{min-height:52px;max-width:520px;font-size:12px;line-height:1.55}
+.world-asset-card .character-profile-copy dl{margin-top:auto;padding:15px 0 13px}
+.world-asset-card .profile-card-actions{gap:8px!important;align-items:center}
+.world-asset-card .profile-card-actions .line-action{padding:7px 0;font-size:10px}
+.world-asset-card .profile-card-actions .line-action:nth-child(2){color:#8ceee2!important}
+@media(max-width:700px){.asset-workspace .character-profile-grid,.character-workspace .character-profile-grid{grid-template-columns:1fr}.world-asset-card{grid-template-columns:1fr}.world-asset-card .character-profile-image{min-height:180px;border-right:0;border-bottom:1px solid #ffffff14}.world-asset-card .character-profile-copy{min-height:230px}}
+/* The 0.4.53 splash art needed a 16:9 override here (see prior history) to
+   avoid cropping. The 0.4.55 replacement is back to a native 1536x1024 —
+   exactly the base rule's 3:2 — so no override is needed; removed rather
+   than left stale pointing at art that's no longer in use. */
+/* The style card's content block (title/tags/version) and its actions row
+   (favorite + Apply) both sat right against the card edges — 14px/12px on
+   top+sides and a bare 12px on the actions row, with no gap between the two
+   blocks. Give it real breathing room on all four sides instead. */
+.visual-style-card-main{padding:20px 20px 12px}
+.visual-style-card>div{padding:4px 20px 20px}
+.visual-style-card h3{margin:0 0 5px}
+.visual-style-card p{margin:0 0 9px}
+/* The image-bleed trick above (.visual-style-card-main img) hardcodes a
+   negative margin matching the *old* 14px/16px padding so the image still
+   reaches the card's outer edge despite the parent having padding. Now that
+   the padding above is 20px/20px, match the offset or the image either
+   leaves a border or overflows the card. */
+.visual-style-card-main img{width:calc(100% + 40px);margin:-20px -20px 10px}

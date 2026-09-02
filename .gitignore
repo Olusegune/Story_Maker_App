@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dist-release/
+dist-release-audit/
+dist-release-final/
+dist-release-retry/
+*.log
