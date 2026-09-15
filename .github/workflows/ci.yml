@@ -1,0 +1,56 @@
+name: CI
+
+# Runs the same regression suite this project has always shipped by
+# hand (npm run test:release: ingestion smoke, visual-direction smoke,
+# style-propagation audit, the ~300-assertion release smoke suite, then
+# `node --check electron-main.js && vite build`) automatically on every
+# push. This repo's actual release history is a series of orphan-branch
+# force-pushes to main (see docs/HANDOVER-*.md) rather than a normal
+# merge history, so "on every push to main" is exactly the right trigger
+# — it fires for every one of those snapshot pushes, which is when a
+# regression would otherwise go unnoticed until it's already shipped.
+#
+# A pinned Windows image, not ubuntu-latest: this is a Windows desktop app, and
+# electron-main.js's own logic (the DaVinci Resolve bridge's tasklist
+# calls, Windows file:// URL handling in the FCPXML export, path
+# separators throughout) is Windows-specific even though the smoke
+# scripts themselves are just static file/string checks that would
+# likely pass on any OS. Testing on the platform the app actually ships
+# for is worth the (free, for a public repo) extra runner cost.
+#
+# No build/publish step here on purpose — this workflow only tests. See
+# the CD scoping conversation in git history if that ever needs to
+# change; nothing here alters how releases are actually shipped today.
+
+# Least-privilege default for the GITHUB_TOKEN this workflow gets — it
+# only needs to read the repo to check out and run tests, never write
+# (no pushes, no PR comments, no releases happen here). Declared
+# explicitly so a broader org/repo default (e.g. write-all) can't hand
+# this job more than it needs without anyone noticing.
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    # Pinned rather than windows-latest: a floating tag can silently swap
+    # the underlying image (and its preinstalled toolchain) out from under
+    # this job. Bump deliberately if GitHub deprecates windows-2022.
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - run: npm ci
+
+      - run: npm run test:release

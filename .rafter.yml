@@ -1,0 +1,67 @@
+# Rafter suppression policy. Every entry below was verified by tracing the
+# actual input -> sink path (not suppressed on pattern-match alone) — see
+# the security-review notes in project history for the full trace on each.
+# Re-verify before widening any of these globs or adding a rule to an
+# existing entry.
+
+ignore:
+  # R-F7958 — "deprecated API version (v0/v1)". These are literal path
+  # segments in third-party vendor URLs (OpenRouter, Kie.ai), not this
+  # app's own API. /api/v1/ is the current, only, documented endpoint for
+  # both vendors as of this writing — there is no v2 to migrate to. The
+  # rule is a generic "v0|v1 in URL" pattern match with no vendor
+  # awareness.
+  - paths: ["electron-main.js"]
+    rules: ["R-F7958"]
+    reason: "openrouter.ai/api/v1/* and api.kie.ai/api/v1/* are the current, only documented endpoints for these providers — not a deprecated version of this app's own API."
+
+  # R-A8269 — "DOM API with dynamic value" (insertAdjacentHTML XSS class).
+  # Every call site in src/storymaker.js either (a) interpolates zero
+  # dynamic values (pure static markup), or (b) passes every dynamic field
+  # through this file's own esc() helper (line ~363: replaces & < > " '
+  # with HTML entities) before interpolation. Traced every one of the 12
+  # flagged call sites individually — none concatenates raw, unescaped
+  # dynamic content into the HTML string. (The two src/main.js call sites
+  # this rule also caught were dead code — file removed entirely.)
+  - paths: ["src/storymaker.js"]
+    rules: ["R-A8269"]
+    reason: "All 12 flagged insertAdjacentHTML calls are either fully static markup or pass every dynamic field through esc() (HTML-entity escaping of & < > \" ') before interpolation — verified line by line."
+
+  # R-310C9 — "non-cryptographic RNG in a security-sensitive context".
+  # Neither flagged use is security-sensitive: line 995 picks a random
+  # loading-screen trivia fact (cosmetic only); line 1295 (and the same
+  # Date.now()+Math.random().toString(36) idiom used identically
+  # throughout this file for scenes/styles/characters/props/sets) builds a
+  # locally-unique object id for a record in the user's own project JSON —
+  # never a token, key, secret, nonce, or salt. This app's actual secrets
+  # (provider API keys, the license key) are handled separately via
+  # Electron's safeStorage, not this id-generation idiom.
+  - paths: ["src/storymaker.js"]
+    rules: ["R-310C9"]
+    reason: "Math.random() here picks display trivia and builds local object ids for a single-user desktop app's own project file — not a token/key/secret/nonce, which this app handles separately via safeStorage."
+
+  # R-A5B92 — "file system operation uses user-controlled path". The path
+  # is process.env.STORYMAKER_SMOKE_SCREENSHOT, read only behind its own
+  # existence check, and used solely to write a PNG screenshot during a
+  # local/CI smoke-test launch. Environment variables are set by whoever
+  # launches this process (a developer or the CI runner) — there is no
+  # network, IPC, or renderer-originated path that can set or influence
+  # this value. Anyone with the ability to set env vars on this process
+  # already has equivalent-or-greater local capability, so validating the
+  # path adds no real trust boundary.
+  - paths: ["electron-main.js"]
+    rules: ["R-A5B92"]
+    reason: "Path comes from an operator-set launch-time env var (STORYMAKER_SMOKE_SCREENSHOT) used only for local/CI smoke-test screenshots — not reachable from any network, IPC, or renderer input."
+
+  # R-438C2 / R-EFEEF — "ReDoS / unsafe regular expression". Traced every
+  # flagged pattern for the actual precondition of catastrophic
+  # backtracking (overlapping character classes under nested/adjacent
+  # unbounded quantifiers) and found none — bounded repetition counts
+  # ({0,3}), disjoint character classes between adjacent quantified groups,
+  # or a single lazy .+? anchored to end-of-string with only an optional
+  # (0-or-1) suffix after it. Confirmed empirically: every pattern ran in
+  # under 2ms against adversarial near-miss input up to 60,000 characters,
+  # with flat (not exponential) scaling as input size grew.
+  - paths: ["src/storymaker.js", "story-ingest.js"]
+    rules: ["R-438C2", "R-EFEEF"]
+    reason: "No overlapping quantifiers on the same character range in any flagged pattern; empirically verified sub-2ms on 60k-char adversarial input with linear (not exponential) scaling — see security-review notes."

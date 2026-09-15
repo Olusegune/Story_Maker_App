@@ -1,0 +1,26 @@
+node_modules/
+dist/
+dist-release/
+dist-release-audit/
+dist-release-final/
+dist-release-retry/
+*.log
+__pycache__/
+*.pyc
+# Crash-telemetry DSN — never commit a real one to this public repo.
+# See docs/STORYMAKER_GUIDE.md's "Crash & error reporting" section for
+# how to create sentry.config.json locally.
+sentry.config.json
+# LemonSqueezy license store/product ids — not secret, but kept out of
+# this public repo. See docs/STORYMAKER_GUIDE.md's "Licensing" section.
+license.config.json
+# Azure Trusted Signing account/profile/endpoint. Not a secret (the
+# secret is the AZURE_* service-principal env vars, never a file), but
+# kept out of the public repo. See docs/CODE_SIGNING.md.
+signing.config.json
+# Local scratch — legacy build/pre-upgrade backups (some multi-GB) and
+# ad-hoc model weights pulled in for unrelated local experiments. Never
+# belongs in a public source repo or its release snapshots.
+backups/
+weights/
+*.pt
